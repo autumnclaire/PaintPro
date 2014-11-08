@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/llOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:id="@+id/llColors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btColorRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_color_red"
+                android:onClick="onRedClick"
+                android:text="Red" />
+
+            <Button
+                android:id="@+id/btColorOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btColorRed"
+                android:onClick="onOrangeClick"
+                android:text="Orange" />
+
+            <Button
+                android:id="@+id/btColorYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btColorOrange"
+                android:onClick="onYellowClick"
+                android:text="Yellow" />
+
+            <Button
+                android:id="@+id/btColorGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/btColorRed"
+                android:onClick="onGreenClick"
+                android:text="Green" />
+
+            <Button
+                android:id="@+id/btColorBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btColorOrange"
+                android:layout_toRightOf="@id/btColorGreen"
+                android:onClick="onBlueClick"
+                android:text="Blue" />
+
+            <Button
+                android:id="@+id/btColorPurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btColorYellow"
+                android:layout_toRightOf="@id/btColorBlue"
+                android:onClick="onPurpleClick"
+                android:text="Purple" />
+            
+                    <Button
+            android:id="@+id/btClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClearClick"
+            android:layout_below="@+id/btColorGreen"
+            android:text="Clear" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/llWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity=""
+            android:layout_toRightOf="@id/llColors"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btWidthNarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onNarrowClick"
+                android:text="Narrow" />
+
+            <Button
+                android:id="@+id/btWidthMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/btWidthNarrow"
+                android:onClick="onMediumClick"
+                android:text="Medium" />
+
+            <Button
+                android:id="@+id/btWidthWide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/btWidthMedium"
+                android:onClick="onWideClick"
+                android:text="Wide" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.yahoo.autumnv.paintapp.DoodleView
+        android:id="@+id/doodleView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/llOptions" />
+
+</RelativeLayout>
