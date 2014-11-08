@@ -11,3 +11,8 @@ Features
 2. (Required) User can choose between at least 6 colors to draw with.
 3. (Required) User can choose between at least 3 different brush sizes.
 4. (Required) User can press "New" to clear the canvas and start over.
+
+
+Walkthrough
+
+![Paint Pro Demo](paint_pro_demo.gif "Paint Pro Walkthrough") 
